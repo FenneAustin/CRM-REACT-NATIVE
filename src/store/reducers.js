@@ -1,11 +1,8 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import person from "../features/customer/reducers";
-
+import { combineReducers } from "redux";
+import customer from "../features/customer/reducers";
 
 const rootReducer = combineReducers({
-    person,
+    customer,
 });
-
-
 
 export default rootReducer;

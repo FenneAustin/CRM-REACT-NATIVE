@@ -1,29 +1,24 @@
-import React from 'react'
-import { SafeAreaView, ScrollView, View, Text, Pressable, Image } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { View, Text } from "react-native";
+import Button from "../../components/Button";
+import styles from "./styles";
+import { clear } from "../../utils/asyncStorage";
 
 const Welcome = () => {
+    const navigation = useNavigation();
 
     return (
-        <SafeAreaView>
-        <View >
-            <Text>{'Welcome to Customer Manager Plus'}</Text>
+        <View style={styles.view}>
+            <Text style={styles.title}>Welcome to Customer Manager Plus!</Text>
+            <Button
+                onPress={() => navigation.navigate("List of Regions")}
+                text="Get Started"
+            />
+
+            <Button onPress={() => clear()} text="Clear Data" />
         </View>
+    );
+};
 
-        <view>
-            <TouchableOpacity>
-                <Text>{'Contine...'}</Text>
-            </TouchableOpacity>
-        </view>
-
-        <view>
-            <TouchableOpacity>
-                <Text>{'Clear storage...'}</Text>
-            </TouchableOpacity>
-        </view>
-        </SafeAreaView>
-    )
-}
-
-export default Welcome
+export default Welcome;
