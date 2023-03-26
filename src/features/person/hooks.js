@@ -17,3 +17,19 @@ export const useUpdateFields = () => {
         },
     }
 }
+
+
+
+
+export const useNewPerson = () => {
+
+        const dispatch = useDispatch()
+
+        const onSubmit = () => {
+            dispatch(actions.createPerson())
+        }
+
+        return {
+            onSubmit,
+        }
+    }
