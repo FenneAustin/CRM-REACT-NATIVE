@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Welcome from "../screens/Welcome"
+import Welcome from "../screens/Welcome/Welcome.js"
 
 
 const Stack = createNativeStackNavigator()
@@ -16,3 +16,5 @@ const Navigation = () => {
 
     )
 }
+
+export default Navigation;

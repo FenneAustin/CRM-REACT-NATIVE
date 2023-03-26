@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import initializeStore from './src/store';
-import Navigation from './src/navigation';
+import Navigation from './src/navigation/index.js';
 
 export default function App() {
 

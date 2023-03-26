@@ -1,12 +1,11 @@
 import React,{useState} from 'react'
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native'
 import { useUpdateFields, useNewPerson} from '../hooks'
-import formStyles from './styles'
+
 
 
 
 const Form = ({ disabled = false, onSubmit }) => {
-    const styles = StyleSheet.create(formStyles())
     const { fields, setFormField } = useUpdateFields()
     const {onSubmit} = useNewPerson()
 
@@ -16,8 +15,7 @@ const Form = ({ disabled = false, onSubmit }) => {
     } = fields
 
     return (
-        <View style={styles.container}>
-            <View style={styles.form}></View>
+        <View>
 
             <TextInput
                 key={'first_name'}

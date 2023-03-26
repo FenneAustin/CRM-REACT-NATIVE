@@ -1,12 +1,11 @@
 import React from 'react'
 import { SafeAreaView, ScrollView, View, Text, Pressable, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import stylesFn from './style'
 
 
 const Region = () => {
 
-    const styles = stylesFn()
+
 
     return (
         <SafeAreaView>
@@ -17,11 +16,11 @@ const Region = () => {
                 </TouchableOpacity>
             </view>
 
-            <View style={styles.container}>
+            <View>
                 <Text>{'List of regions'}</Text>
             </View>
 
-            <View style={styles.container}>
+            <View>
                 <Text>{'Select a region:'}</Text>
             </View>
 

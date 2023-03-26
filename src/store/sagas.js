@@ -1,5 +1,5 @@
 import {all} from "redux-saga/effects"
-import person from "../features/customer/sagas"
+import person from "../features/person/sagas"
 
 export default function* rootSaga(){
     yield all([
